@@ -1,12 +1,20 @@
-//https://leetcode.com/problems/binary-tree-inorder-traversal/
-vector<int>v;
-vector<int> inorderTraversal(TreeNode *root)
+// https://leetcode.com/problems/binary-tree-preorder-traversal/
+vector<int> preorderTraversal(TreeNode *root)
 {
-    if (root != NULL)
+    if (!root)
+        return {};
+    stack<TreeNode *> st;
+    st.push(root);
+    vector<int> res;
+    while (!st.empty())
     {
-        inorderTraversal(root->left);
-        v.push_back(root->val);
-        inorderTraversal(root->right);
+        TreeNode *curr = st.top();
+        res.push_back(curr->val);
+        st.pop();
+        if (curr->right)
+            st.push(curr->right);
+        if (curr->left)
+            st.push(curr->left);
     }
-    return v;
+    return res;
 }

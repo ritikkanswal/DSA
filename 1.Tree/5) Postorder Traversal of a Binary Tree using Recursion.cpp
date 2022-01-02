@@ -1,12 +1,12 @@
-//https://leetcode.com/problems/binary-tree-inorder-traversal/
-vector<int>v;
-vector<int> inorderTraversal(TreeNode *root)
+// https://leetcode.com/problems/binary-tree-postorder-traversal/
+vector<int> v;
+vector<int> postorderTraversal(TreeNode *root)
 {
     if (root != NULL)
     {
-        inorderTraversal(root->left);
+        postorderTraversal(root->left);
+        postorderTraversal(root->right);
         v.push_back(root->val);
-        inorderTraversal(root->right);
     }
     return v;
 }
