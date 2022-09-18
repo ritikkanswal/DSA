@@ -1,6 +1,11 @@
 // https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
 
 // Method 1
+// Given same node be ancestor of itself or not (otherwise confirm from interviewer)
+// Time complexity -> O(n)
+// Space complexity -> O(n)
+
+
 vector<TreeNode *> find_path(TreeNode *root, vector<TreeNode *> p, TreeNode *x)
 {
     if (!root)
@@ -26,6 +31,8 @@ TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
     return p1[n - 1];
 }
 // Method 2
+// Time complexity -> O(n)
+// Space complexity -> O(h)
 TreeNode *lca(TreeNode *root, TreeNode *p, TreeNode *q)
 {
     if (!root)

@@ -1,38 +1,32 @@
 // https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1#
 // Method-1 BFS (vertical level order traversal)
+
 vector<int> topView(Node *root)
 {
-    Node *curr;
+    vector<int> res;
+    map<int, int> mp;
     queue<pair<Node *, int>> q;
     q.push({root, 0});
-    vector<int> ans;
-    map<int, vector<int>> mymap;
-
-    //BFS
     while (!q.empty())
     {
-        int size = q.size();
-        map<int, set<int>> mapset;
-
-        for (int i = 0; i < size; i++)
+        auto x = q.front();
+        q.pop();
+        Node *curr = x.first;
+        int i = x.second;
+        if (mp.find(i) == mp.end())
+            mp[i] = curr->data;
+        if (curr->left)
         {
-            curr = q.front().first;
-            int col = q.front().second;
-            q.pop();
-            mapset[col].insert(curr->data);
-
-            if (curr->left)
-                q.push({curr->left, col - 1});
-            if (curr->right)
-                q.push({curr->right, col + 1});
+            q.push({curr->left, i - 1});
         }
-        for (auto it : mapset)
-            for (auto it2 : it.second)
-                mymap[it.first].push_back(it2);
+        if (curr->right)
+        {
+            q.push({curr->right, i + 1});
+        }
     }
-    //Now pass all values from mymap to ans array
-    for (auto it : mymap)
-        ans.push_back(it.second[0]);
-
-    return ans;
+    for (auto i : mp)
+    {
+        res.push_back(i.second);
+    }
+    return res;
 }

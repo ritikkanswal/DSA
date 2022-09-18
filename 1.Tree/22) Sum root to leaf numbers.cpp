@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/sum-root-to-leaf-numbers/
+
+// Time complexity -> O(n)
+// Space complexity -> O(h)
+
 int res = 0;
 void dfs(TreeNode *root, int val)
 {

@@ -63,8 +63,7 @@ bool isSubtree(TreeNode *root, TreeNode *subRoot)
     StoreInorder(subRoot, s2);
     StorePreorder(root, s3);
     StorePreorder(subRoot, s4);
-    cout << s1 << " " << s2 << endl;
-    cout << s3 << " " << s4 << endl;
+
     if (s1.find(s2) != std::string::npos)
     {
         if (s3.find(s4) != std::string::npos)

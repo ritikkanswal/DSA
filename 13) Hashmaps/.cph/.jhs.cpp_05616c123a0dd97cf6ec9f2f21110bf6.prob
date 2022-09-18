@@ -1,0 +1,1 @@
+{"name":"Local: jhs","url":"d:\\DSA\\13) Hashmaps\\jhs.cpp","tests":[{"id":1662888903199,"input":"3\n7 3 1\n3","output":"1"},{"id":1662889067485,"input":"4\n5 10 15 20\n4","output":"3"},{"id":1662889083396,"input":"5\n2 4 1 3 1\n5","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\13) Hashmaps\\jhs.cpp","group":"local","local":true}

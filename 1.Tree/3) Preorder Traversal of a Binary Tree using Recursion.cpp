@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
+// Time Complexity : O(n)
+// Space Complexity : O(h)
 void preOrder(TreeNode *root, vector<int> &v)
 {
     if (root)

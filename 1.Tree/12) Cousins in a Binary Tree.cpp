@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/cousins-in-binary-tree/
 
 // Method-1
+// Time Complexity : O(n)
+// Space Complexity : O(h)
 bool is_siblings(TreeNode *root, int x, int y)
 {
     if (!root)
@@ -30,7 +32,10 @@ bool isCousins(TreeNode *root, int x, int y)
 }
 
 //Method 2
-
+// Time Complexity : O(n)
+// Space Complexity : O(n) or O(2^h)
+// Note: Maximum queue size would be 2^h, but 2^h is nearly equivalent to O(n)
+// For skewed tree, maximum queue size would be o(1) (considering it to be the best case)
 bool isCousins(TreeNode *root, int x, int y)
 {
     queue<TreeNode *> q;

@@ -1,4 +1,6 @@
 //https://leetcode.com/problems/binary-tree-inorder-traversal/
+// Time Complexity : O(n)
+//Space Complexity : O(n)
 vector<int> inorderTraversal(TreeNode *root)
 {
     if (!root)
@@ -24,3 +26,4 @@ vector<int> inorderTraversal(TreeNode *root)
     }
     return res;
 }
+

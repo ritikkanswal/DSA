@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/minimum-depth-of-binary-tree/
+// Time complexity -> O(n)
+// Space complexity -> O(h)
 int mi = INT_MAX;
 void dfs(TreeNode *root, int k)
 {

@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/binary-tree-postorder-traversal/
+// Time Complexity : O(n)
+// Space Complexity : O(n)
 vector<int> postorderTraversal(TreeNode *root)
 {
     if (!root)

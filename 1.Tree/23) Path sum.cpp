@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/path-sum/
+
+// Time complexity -> O(n)
+// Space complexity -> O(h)
+
 bool check(TreeNode *root, int targetSum, int s)
 {
     if (!root)

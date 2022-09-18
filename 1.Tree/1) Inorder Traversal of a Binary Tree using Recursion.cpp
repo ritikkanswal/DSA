@@ -1,4 +1,6 @@
 //https://leetcode.com/problems/binary-tree-inorder-traversal/
+// Time Complexity : O(n)
+//Space Complexity : O(h)
 vector<int>v;
 vector<int> inorderTraversal(TreeNode *root)
 {

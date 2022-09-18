@@ -1,4 +1,8 @@
 //  https://leetcode.com/problems/binary-tree-level-order-traversal/
+// Time Complexity : O(n)
+// Space Complexity : O(n) or O(2^h)
+// Note: Maximum queue size would be 2^h, but 2^h is nearly equivalent to O(n)
+// For skewed tree, maximum queue size would be o(1) (considering it to be the best case)
  vector<vector<int>> levelOrder(TreeNode* root) {
     if(!root) return {};
     queue<TreeNode *>q;

@@ -1,5 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/leaf-at-same-level/1#
 
+
+// Time complexity -> O(n)
+// Space complexity -> O(h)
 int prev = -1;
 bool dfs(Node *root, int k)
 {

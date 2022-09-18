@@ -1,4 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1#
+
+
+// Time complexity -> O(n)
+// Space complexity -> O(h)
 int dfs(Node *root)
 {
     if (!root)

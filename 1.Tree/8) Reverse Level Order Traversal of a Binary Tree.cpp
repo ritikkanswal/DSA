@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
 
 // APPROACH-1 (using Reverse())
+// Time Complexity : O(n)
+//Space Complexity : O(n)
 vector<vector<int>> levelOrderBottom(TreeNode *root)
 {
     if (!root)
@@ -29,6 +31,8 @@ vector<vector<int>> levelOrderBottom(TreeNode *root)
 }
 
 // APPROACH-2 (using Stack)
+// Time Complexity : O(n)
+//Space Complexity : O(2*n)
 vector<vector<int>> levelOrderBottom(TreeNode *root)
 {
     if (!root)
@@ -62,13 +66,17 @@ vector<vector<int>> levelOrderBottom(TreeNode *root)
 }
 
 // APPROACH-3 (By first calculating number of Levels)
-
+// Time Complexity : O(n)
+// Space Complexity : O(n) or O(2^h)
+// Note: Maximum queue size would be 2^h, but 2^h is nearly equivalent to O(n)
+// For skewed tree, maximum queue size would be o(1) (considering it to be the best case)
 int dfs(TreeNode *root)
 {
     if (!root)
         return 0;
     return max(dfs(root->left), dfs(root->right)) + 1;
 }
+
 vector<vector<int>> levelOrderBottom(TreeNode *root)
 {
     if (!root)

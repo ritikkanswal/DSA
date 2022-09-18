@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
+// Time Complexity : O(n)
+// Space Complexity : O(n)
 vector<int> preorderTraversal(TreeNode *root)
 {
     if (!root)
